@@ -1,2 +1,3 @@
 /.idea/
-/file-to-elasticsearch-kafka/.gradle/
+**/.gradle/
+**/build/

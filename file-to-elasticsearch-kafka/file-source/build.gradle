@@ -1,19 +1,14 @@
 plugins {
-    id 'java'
-}
-
-group 'org.farhan.experiment'
-version '1.0-SNAPSHOT'
-
-repositories {
-    mavenCentral()
+    id 'org.springframework.boot' version "2.7.12"
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
-}
-
-test {
-    useJUnitPlatform()
+//    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+//    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation('org.springframework.boot:spring-boot-starter')
+    implementation('org.springframework.cloud.stream.app:file-source-kafka:3.2.1'){
+        exclude group: 'com.wavefront', module: 'wavefront-spring-boot-starter'
+        exclude group: 'io.micrometer'
+    }
 }
