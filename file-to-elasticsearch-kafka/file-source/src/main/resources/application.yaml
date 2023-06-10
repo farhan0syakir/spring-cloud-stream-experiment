@@ -1,0 +1,18 @@
+file:
+  supplier:
+    directory: /tmp/file-source
+  consumer:
+    mode: lines
+
+spring:
+  cloud:
+    stream:
+      function:
+        bindings:
+          fileSupplier-out-0: my-other-output
+      kafka:
+        binder:
+          brokers: localhost:9092
+
+    function:
+      definition: fileSupplier

@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Import;
 @Import(FileSupplierConfiguration.class)
 public class FileSourceApplication {
 
-	public static void main(String[] args){
-		SpringApplication.run(FileSourceApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(FileSourceApplication.class, args);
+    }
 }

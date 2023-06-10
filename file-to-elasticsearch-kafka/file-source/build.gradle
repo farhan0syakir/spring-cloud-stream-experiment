@@ -5,8 +5,9 @@ plugins {
 dependencies {
 //    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
 //    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
+//    implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation('org.springframework.boot:spring-boot-starter')
+    implementation('org.springframework.cloud:spring-cloud-stream-binder-kafka:3.1.4')
     implementation('org.springframework.cloud.stream.app:file-source-kafka:3.2.1'){
         exclude group: 'com.wavefront', module: 'wavefront-spring-boot-starter'
         exclude group: 'io.micrometer'
