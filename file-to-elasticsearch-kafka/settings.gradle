@@ -1,0 +1,5 @@
+rootProject.name = 'file-to-elasticsearch-kafka'
+include 'file-source'
+include 'my-transform'
+include 'elasticsearch-sink'
+
